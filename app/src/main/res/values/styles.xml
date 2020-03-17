@@ -1,0 +1,271 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorButtonNormal">@color/colorPrimary3</item>
+        <item name="colorControlActivated">@color/colorPrimary2</item>
+        <item name="android:textColorPrimary">@color/colorPrimary2</item>
+        <item name="actionBarItemBackground">@color/colorPrimaryDark2</item>
+        <item name="colorControlNormal">@color/colorPrimary2</item>
+        <item name="colorControlHighlight">@color/colorPrimary2</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="DatePickerTheme" parent="AlertDialogTheme">
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:datePickerStyle">@style/AlertDialogTheme</item>
+        <item name="android:datePickerDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:buttonBarButtonStyle">@style/ButtonBarStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonBarStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/ButtonBarStyle</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ButtonBarStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/colorPrimary3</item>
+    </style>
+
+    <style name="Toolbar2Style" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="RecyclerCourseNames">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="RecyclerTermNames">
+        <item name="android:textColor">@color/colorPrimary3</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="DatePickerTV">
+        <item name="android:textColor">@color/floatTxtColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/text_outline</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="DatePickerTV2">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/text_outline2</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="DatePickerTV3">
+        <item name="android:textColor">@color/colorPrimary3</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/text_outline2</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="DatePickerTV4">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="DatePickerTV5">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/recycler_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/text_outline3</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundMode">outline</item>
+
+        <item name="errorTextColor">@color/bgRowBG</item>
+        <item name="boxStrokeColor">@color/floatTxtColor</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/floatTxtColor</item>
+        <item name="hintTextColor">@color/floatTxtColor</item>
+        <item name="hintTextAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="colorControlActivated">@color/floatTxtColor</item>
+        <item name="android:state_activated">true</item>
+    </style>
+
+    <style name="TextInput2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundMode">outline</item>
+
+        <item name="errorTextColor">@color/bgRowBG</item>
+        <item name="boxStrokeColor">@color/colorPrimary2</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/colorPrimary3</item>
+        <item name="hintTextColor">@color/colorPrimary2</item>
+        <item name="hintTextAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="colorControlActivated">@color/colorPrimary2</item>
+        <item name="colorControlNormal">@color/colorPrimary2</item>
+        <item name="android:state_activated">true</item>
+    </style>
+
+    <style name="Headers1">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Headers2">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Headers3">
+        <item name="android:textColor">@color/colorPrimary3</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Headers4">
+        <item name="android:textColor">@color/addNewColor2</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Headers5">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Headers6">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="text_style1">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="text_style2">
+        <item name="android:textColor">@color/colorPrimary3</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="text_style3">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="text_style4">
+        <item name="android:textColor">@color/addNewColor2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="text_style5">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="text_style6">
+        <item name="android:textColor">@color/addNewColor2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="text_style7">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="text_style8">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="TextHeaderStyle1">
+        <item name="android:textColor">@color/colorPrimary2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="small_text_style1">
+        <item name="android:textColor">@color/addNewColor2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="InfoText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="styleText1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary2</item>
+    </style>
+    <style name="styleText2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary3</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="styleText3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/addNewColor2</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <!--THEME FOR COURSES TAB LAYOUT (NOT IMPLEMENTED)-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+</resources>

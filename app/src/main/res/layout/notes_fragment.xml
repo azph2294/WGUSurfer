@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_note_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    tools:context="fragments.NotesFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/in_note_root">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/card_margin">
+
+            <TextView
+                android:id="@+id/course_Header_lbl5"
+                style="@style/Headers2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/textTop_margin"
+                android:text="@string/PH_courseName"
+                app:layout_constraintStart_toStartOf="@+id/constraint_notes"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notes_header_lbl"
+                style="@style/TextHeaderStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:text="@string/course_notes_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/course_Header_lbl5" />
+
+            <ImageButton
+                android:id="@+id/info_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:layout_marginEnd="@dimen/textTop_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/info_text"
+                app:srcCompat="@drawable/ic_info2_outline_yellow_25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/course_Header_lbl5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_note_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textTop_margin"
+                android:layout_marginTop="@dimen/fifteen_dimen"
+                android:gravity="center"
+                android:text="@string/add_note_btn"
+                android:textColor="@color/colorPrimary2"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="@dimen/land_card_margin"
+                app:layout_constraintStart_toEndOf="@id/notes_header_lbl"
+                app:layout_constraintTop_toBottomOf="@id/course_Header_lbl5"
+                app:rippleColor="@color/colorPrimary2"
+                app:strokeColor="@color/colorPrimary3"
+                app:strokeWidth="0.5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="480dp"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:layout_marginBottom="@dimen/card_margin"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="@dimen/recycler_margin"
+                app:cardElevation="@dimen/recycler_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notes_header_lbl">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notes_list_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/recycler_margin"
+                    android:scrollbars="vertical"
+                    android:textAlignment="viewStart" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

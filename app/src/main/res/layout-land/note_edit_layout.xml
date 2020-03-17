@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="520dp"
+    android:id="@+id/edit_note_layout_main">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint_noteE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraint_noteE">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_assess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_margin"
+        android:paddingBottom="@dimen/sixty_margin">
+
+    <TextView
+        android:id="@+id/edit_note_H"
+        style="@style/Headers3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/forty_dimen"
+        android:layout_marginStart="@dimen/card_margin"
+        android:text="@string/edit_notes_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/note_id_lbl"
+        style="@style/text_style7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:padding="@dimen/land_card_margin"
+        android:text="@string/courseNote_id_lbl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_note_H" />
+
+    <TextView
+        android:id="@+id/note_id_num"
+        style="@style/text_style7"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:padding="@dimen/land_card_margin"
+        android:text="@string/note_id_PH"
+        app:layout_constraintStart_toEndOf="@id/note_id_lbl"
+        app:layout_constraintTop_toBottomOf="@id/edit_note_H" />
+
+    <ImageButton
+        android:id="@+id/share_imgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/forty_dimen"
+        android:layout_marginEnd="@dimen/textTop_margin"
+        android:contentDescription="@string/share_notes_tb"
+        app:srcCompat="@drawable/ic_share_yellow_24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/note_edit_txt"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:ellipsize="start"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:labelFor="@id/note_edit_txt"
+        android:maxLines="10"
+        android:padding="@dimen/fifteen_dimen"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary3"
+        android:textColorHint="@color/colorPrimary3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_id_lbl" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_notes_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:layout_marginStart="@dimen/card_margin"
+        android:gravity="center"
+        android:text="@string/save_note_btn"
+        android:textColor="@color/colorPrimary2"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="@dimen/land_card_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_edit_txt"
+        app:rippleColor="@color/colorPrimary2"
+        app:strokeColor="@color/colorPrimary3"
+        app:strokeWidth="0.5dp" />
+
+    <TextView
+        android:id="@+id/createDate_lbl"
+        style="@style/text_style2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:text="@string/createdate_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_notes_btn" />
+
+    <TextView
+        android:id="@+id/createDate_txt"
+        style="@style/text_style7"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/land_card_margin"
+        android:padding="@dimen/land_card_margin"
+        android:text="@string/timestamp_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createDate_lbl" />
+
+    <TextView
+        android:id="@+id/lastUpdate_lbl"
+        style="@style/text_style2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:text="@string/lastUpdate_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createDate_txt" />
+
+    <TextView
+        android:id="@+id/lastUpdate_txt"
+        style="@style/text_style7"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/land_card_margin"
+        android:layout_marginBottom="72dp"
+        android:padding="@dimen/land_card_margin"
+        android:text="@string/timestamp_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastUpdate_lbl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

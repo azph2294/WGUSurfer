@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    tools:context="activities.terms_courses.AllTermsActivity">
+
+    <include
+        android:id="@+id/currTerm_TB"
+        layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/termSym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/allTerms_img"
+        app:srcCompat="@drawable/ic_all_terms_btn"
+        app:layout_constraintBottom_toTopOf="@+id/term_rv_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currTerm_TB"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <TextView
+        android:id="@+id/termText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:background="@color/colorPrimaryDark2"
+        android:text="@string/termsLbl"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/termSym"
+        app:layout_constraintTop_toBottomOf="@id/currTerm_TB" />
+
+    <ImageButton
+        android:id="@+id/info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/textTop_margin"
+        android:layout_marginBottom="@dimen/card_margin"
+        android:contentDescription="@string/info_text"
+        app:srcCompat="@drawable/ic_info2_outline_yellow_25dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/term_rv_card"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/term_rv_card"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginTop="@dimen/textTop_margin"
+        android:layout_marginEnd="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin"
+        app:cardCornerRadius="@dimen/recycler_margin"
+        app:cardElevation="@dimen/recycler_margin"
+        app:cardBackgroundColor="@color/colorPrimaryDark2"
+        app:layout_constraintBottom_toTopOf="@id/swipeup_TB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termText">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/term_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:padding="@dimen/card_margin">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/new_term_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false">
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/swipeup_TB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="bottom"
+        app:expandedTitleGravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@id/root_Layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/swipe_root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark2"
+            android:padding="@dimen/card_margin">
+
+            <ImageView
+                android:id="@+id/swipeup_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/swipeUpT"
+                app:srcCompat="@drawable/ic_swipeup_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/swipeuptext"
+                app:layout_constraintLeft_toLeftOf="@+id/swipe_root_layout"
+                app:layout_constraintRight_toRightOf="@id/swipe_root_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/swipeuptext"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:text="@string/swipeUpT"
+                android:maxWidth="170dp"
+                android:maxLines="2"
+                android:textColor="@color/colorPrimary2"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/swipe_root_layout"
+                app:layout_constraintEnd_toEndOf="@id/swipe_root_layout"
+                app:layout_constraintStart_toStartOf="@id/swipe_root_layout"
+                tools:ignore="RtlCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

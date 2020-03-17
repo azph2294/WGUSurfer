@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="activities.splash_main.SplashActivity">
+
+    <ImageView
+        android:id="@+id/surfer"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/surfer_img"
+        app:layout_constraintBottom_toTopOf="@+id/wguText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_surfer_main" />
+
+    <ImageView
+        android:id="@+id/wguText"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/wgutext_img"
+        android:layout_marginBottom="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/surfer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

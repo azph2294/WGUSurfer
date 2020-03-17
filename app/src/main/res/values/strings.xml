@@ -1,0 +1,232 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Toolbar titles-->
+    <string name="appName">WGU Surfer</string>
+    <string name="mainLbl1">Current Term</string>
+    <string name="mainLbl2">View All Terms</string>
+    <string name="mainLbl3">Progress Tracker</string>
+    <string name="supportLbl">Support</string>
+    <string name="editTerm">Edit Term</string>
+    <string name="editNote">Edit Note</string>
+    <!--Images-->
+    <string name="surfer_img">surfer_Img</string>
+    <string name="wgutext_img">surfer_text_img</string>
+    <string name="currterm_btn">currTerm_btn</string>
+    <string name="currterm_img">currterm_img</string>
+    <string name="allTerms_img">currterm_img</string>
+    <!--Button text-->
+    <string name="addTermBtn">Add Term</string>
+    <string name="addTermBtn2">Add New Term</string>
+    <string name="addNewTerm"><u>Add New Term</u></string>
+    <string name="courseAdd">course_add</string>
+    <string name="PH_currTermLbl">Spring 2020 Term</string>
+    <string name="PH_startTermLbl">11/01/2019</string>
+    <string name="PH_endTermLbl">04/31/2020</string>
+    <string name="PH_term_dates">11/01/2019 – 04/31/2020</string>
+    <string name="EditTerm">Edit Term</string>
+    <!--Labels-->
+    <string name="coursesLbl">Courses</string>
+    <string name="currCoursesLbl">Courses For The Current Term</string>
+    <string name="termsLbl">All Terms</string>
+    <string name="SDEditBtn">SDEditBtn</string>
+    <string name="EDEditBtn">EDEditBtn</string>
+    <string name="deleteC">Delete Course</string>
+    <string name="deleteT">Delete Term</string>
+    <string name="deleteA">Delete Assessment</string>
+    <string name="deleteN">Delete Note</string>
+    <!--Swipes/Info text-->
+    <string name="longClickEditTerm">*Long press on the term you would like to edit.</string>
+    <string name="clickToTerm">*Click on the term to see term details.</string>
+    <string name="swipeDeleteC">*Swipe left to delete course from current term.</string>
+    <string name="swipeUpT">Swipe up to add new term. Swipe down to dismiss.</string>
+    <string name="swipeDeleteT">*Swipe left to delete term.</string>
+    <!--Menu options-->
+    <string name="menu_all_terms_data">Add Test Data</string>
+    <string name="menu_curr_course_data">Add Test Data</string>
+    <string name="support">Support</string>
+    <string name="menu_edit_course">Edit Course</string>
+    <string name="menu_drop_course">Drop Course</string>
+    <!--Floating labels/PH text-->
+    <string name="termNameFloat">Term Name:</string>
+    <string name="PH_courseName">Mobile Application Development - C196</string>
+    <string name="PH_termName">Spring 2020</string>
+    <string name="termName">Term Name</string>
+    <string name="termSDText">Select Term Start Date</string>
+    <string name="termEDText">Select Term End Date</string>
+    <string name="termSDFloatLbl">Term Start Date:</string>
+    <string name="termEDFloatLbl">Term End Date:</string>
+    <string name="popUpStart">Term Start Date</string>
+    <string name="popUpEnd">Term End Date</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="currTermInfo">**To edit terms and courses go to "View All Terms"</string>
+    <string name="new_course_info">**Start and end dates must be within the associated term.</string>
+    <string name="new_assess_info">**Anticipated goal date must be within the associated course.</string>
+    <string name="in_term_info">**Course start date must be future date if term has started.</string>
+
+    <!--Course Color Key (Current Term)-->
+    <string name="course_color_key">Course Color Key:</string>
+    <string name="in_progress">In Progress = GREEN</string>
+    <string name="plan_to_take">Plan To Take = YELLOW</string>
+    <string name="dropped">Dropped = RED</string>
+    <string name="completed">Completed = CYAN</string>
+
+    <!--Add Course Bottom Sheet-->
+    <string name="scrHeader"><u>Add New Course</u></string>
+    <string name="addNewCBtn">Add New Course</string>
+    <string name="course_nameHint">Course Name</string>
+    <string name="start_dateHint">Start Date</string>
+    <string name="anti_end_dateHint">Anticipated End Date</string>
+    <string name="mentor_nameHint">Course Mentor Name</string>
+    <string name="mentor_emailHint">Course Mentor Email</string>
+    <string name="mentor_phoneHint">Course Mentor Phone</string>
+    <string name="c_bot_nav_home">Course Home</string>
+    <string name="c_bot_nav_assessments">Assessments</string>
+    <string name="c_bot_nav_course_mentor">Course Mentor</string>
+    <string name="c_bot_nav_course_mentor2"><u>Course Mentor</u></string>
+    <string name="c_bot_nav_notes">Course Notes</string>
+    <string name="c_desc_text">Course Description</string>
+    <string name="c_desc_text2"><u>Course Description</u></string>
+
+    <!--Add Assessments Bottom Sheets-->
+    <string name="add_p_assess_header"><u>Add New Performance Assessment</u></string>
+    <string name="add_p_assess_btn_txt">Add New Performance Assessment</string>
+    <string name="add_o_assess_header"><u>Add New Objective Assessment</u></string>
+    <string name="add_o_assess_btn_txt">Add New Objective Assessment</string>
+    <string name="p_assess_name">Performance Assessment Name</string>
+    <string name="o_assess_name">Objective Assessment Name</string>
+
+    <!--Edit Assessments/Notes Bottom Sheets-->
+    <string name="edit_p_assess_header"><u>Edit Performance Assessment</u></string>
+    <string name="edit_o_assess_header"><u>Edit Objective Assessment</u></string>
+    <string name="edit_p_btn">Edit Performance Assessment</string>
+    <string name="edit_o_btn">Edit Objective Assessment</string>
+    <string name="goal_dateHint">Goal Date</string>
+    <string name="sched_SD_Hint">Scheduled Start Date</string>
+    <string name="PH_assess_p_name">Performance Assessment Name</string>
+    <string name="PH_assess_o_name">Objective Assessment Name</string>
+
+    <!--Course Activity-->
+    <string name="course_SD">Course Start Date:</string>
+    <string name="course_ED">Course Anticipated End Date:</string>
+    <string name="course_dueD">Course Due Date:</string>
+    <string name="course_status_lbl">Current Status:</string>
+    <string name="status_typePH">In Progress</string>
+    <string name="mentor_name_PH">Eric Smith</string>
+    <string name="mentor_phone_PH">(555) 678–4432</string>
+    <string name="mentor_email_PH">esmi268@wgu.edu</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="edit_scr_Header"><u>Edit Course</u></string>
+
+    <string name="mentor_phone_PH_u"><u>(555) 678–4432</u></string>
+    <string name="mentor_email_PH_u"><u>esmi268@wgu.edu</u></string>
+
+    <!--(FAB)-->
+    <string name="edit_c_lbl">Edit Course</string>
+    <string name="edit_mentor_lbl">Edit Mentor</string>
+    <string name="in_progress_fab">In Progress</string>
+    <string name="plan_to_take_fab">Plan To Take</string>
+    <string name="select_status">Choose course status:</string>
+
+    <string-array name="status_spinner">
+        <item>In Progress</item>
+        <item>Plan To Take</item>
+        <item>Dropped</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string-array name="status_spinner_no_drop">
+        <item>In Progress</item>
+        <item>Plan To Take</item>
+    </string-array>
+
+    <!--In Course Activity-->
+    <string name="drop_info">This course is dropped. Assessments and course notes cannot be added.</string>
+    <string name="info_text">info_text</string>
+    <string name="perf_asses_txt">Performance Assessments</string>
+    <string name="obj_asses_txt">Objective Assessments</string>
+    <string name="perf_img_btn">perf_img_btn</string>
+    <string name="add_assess_test_data">Add Assessments Data</string>
+    <string name="PH_perf_name"><![CDATA[Algorithms, Complexity, & Recursiveness Assessment]]></string>
+    <string name="home_tabs">Home</string>
+    <string name="due_date_lbl">Due Date</string>
+    <string name="mentor_img_desc">mentor_img</string>
+    <string name="edit_mentor_btn">Edit Mentor</string>
+
+    <!--Note Layout-->
+    <string name="edit_notes_header"><u>Edit Course Note</u></string>
+    <string name="course_notes_txt">Course Notes</string>
+    <string name="courseNote_id_lbl">Course ID:</string>
+    <string name="note_id_PH">3</string>
+    <string name="course_id_lbl">Course ID:</string>
+    <string name="course_id_PH">2</string>
+    <string name="notes_text">notes_text</string>
+    <string name="save_note_btn">Save Note</string>
+    <string name="share_notes_tb">Share Note</string>
+    <string name="add_notes_data">Add Notes Data</string>
+    <string name="noteAdd">noteAdd</string>
+    <string name="add_note_btn">Add Note</string>
+    <string name="add_note_txt"><u>Add Note</u></string>
+    <string name="write_note_PH" tools:ignore="TypographyEllipsis">Write note here...</string>
+    <string name="timestamp_txt" tools:ignore="TypographyDashes">2020-01-13 16:30:00</string>
+    <string name="createdate_txt">Created:</string>
+    <string name="lastUpdate_txt">Last Updated:</string>
+    <string name="contact_support">Contact:</string>
+    <string name="eric_wgu_com">esmi268@wgu.edu</string>
+    <string name="eric_smith">Eric Smith</string>
+    <string name="share_note_lbl">Share Note</string>
+
+    <!--Progress Tracker-->
+    <string name="track_courses_by_status"><u>Courses By Status</u></string>
+    <string name="courses_in_progress">In Progress</string>
+    <string name="courses_plan_to_take">Plan To Take</string>
+    <string name="courses_completed">Completed</string>
+    <string name="courses_dropped">Dropped</string>
+    <string name="choose_status">Choose Status:</string>
+    <string name="your_courses_txt">Your Courses</string>
+    <string name="days_until_end_of_term">Days Left In Current Term</string>
+    <string name="term_days_left">12</string>
+    <string name="completed_courses">Completed Courses</string>
+    <string name="dropped_courses">Dropped Courses</string>
+
+    <!--Active Terms & Notifications-->
+    <string name="channel_name">WGU Surfer</string>
+    <string name="channel_description">notifications</string>
+    <string name="make_ct_active">Make current term?</string>
+    <string name="make_ct_inactive">Remove as current term?</string>
+    <string name="version_number">Version 1.1.1</string>
+    <string name="reflect_lbl">Reflection</string>
+    <string name="sources_lbl">Sources</string>
+
+    <!--Reflection Text-->
+    <string name="reflect_text1"><font fgcolor='#00FFFF'>Eric Smith</font> \n<font fgcolor='#00FFFF'>C196 - Mobile Application Development</font>\n\n
+        1. <sup>1</sup><p>Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources. The mobile development process involves creating installable software bundles (code, binaries, assets, etc.), implementing backend services such as data access with an API, and testing the application on target devices.</p>\n\n
+<p>Native mobile applications are written in the programming language and frameworks provided by the platform owner and running directly on the operating system of the device such as iOS and Android. My mobile application development project is a native application written in Java in the Android Studio IDE (Integrated Development Environment). When considering building my application and the architecture I would use, the most important part which weighted my decision was knowing what platform and version my application would be deploying to. With each different platform and version comes new capabilities to learn and the type of application brings limitations on the audience I intend to reach. The architecture of the application must also be functional and understanding enough to reduce confusion for new developers working on the application in the future. This will consist of how the user interprets the application through the user interface (UI) to accessibility and convenience. This includes how long it takes the user to find what they are looking for, as well as, are all functions
+    in place for the user to complete all the applications functions. When creating this application I implemented these specifics into my architecture components.</p>\n\n
+        <blockquote> 1a.	This application has a minimum SDK version of 21 and the Target SDK Version is Android 9.0 (Pie - API 28) and a build cradle version of 3.6.1.</blockquote>\n\n
+<p>2. There were many challenges that I faced during the development of this mobile application. These challenges were necessary for me to not just complete the app but to also become a better mobile developer. The long days and nights were just a building block into imperative experience that I had to gain in order to get better at coding the application. For this application I migrated to Android X and used the
+    following architecture components:</p>\n\n
+        <blockquote>A.	Room Persistence Library, which was the database I used for saving data. Getting acquainted with Room was a challenge in itself because I have never used it before, but when I got familiar with this library, organizing my project became easier and more maintainable. The key factor that took place in my decision to use Room as opposed to SQLite was database access with or without an internet connection and the powerful and convenient use of Room’s annotations.</blockquote>\n\n
+        <blockquote>B.	The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way (Android Developers, Guides, Architecture Components). I chose to use the ViewModel class because from the start I knew that managing my data between activities and fragments was crucial to the application’s functionality. This was and still is a learning process because of the implementation of data binding which I did not incorporate into my project. I felt that the Data Binding Library was unnecessary for this application, but because I did implement the ViewModel class I can always go back to my application to integrate this into my application for more functionality between classes.</blockquote>\n\n
+        <p>3. The challenges that I faced throughout this application’s development lifecycle were a matter of focus. There were times in the beginning of development where I had to do my research and didn’t even get a chance to open Android Studio. There was no need to. I had to grasp concepts to include ViewModel lifecycles and its implementation as well as Room and its implementation. To overcome the challenges properly I had to organize my learning and research how to properly structure my application in Android Studio and more importantly the structure of my architecture components.</p>\n\n
+    <p>4. What would I do differently if I could do the project again? For one, I believe that my project was successful in most attempts but I do believe that I could have went a step further with the user interface and functionality. In the modern era of mobile development there are more and more user accessible features that attract the user. I would have liked to implement these types of features in my own way or even create something of my own. The decision I had to make on this situation was based on time and usability. Second, I believe that the project structure of my application could have been a lot better in regards to encapsulation. This is a constant learning curve that I am getting better at and for the most part, with the more I research and learn this will become second nature.</p>\n\n
+       <p>5. <sup>2</sup>The Android Emulator simulates Android devices on your computer so that you can test your application on a variety of devices and Android API levels without needing to have the physical device. The emulator provides almost all of the capabilities of a real Android device. You can simulate incoming phone calls and text messages, specify the location of the device, simulate different network speeds, simulate rotation and other hardware sensors, access the Google Play Store, and much more. Testing your app on the emulator is in some ways faster and easier than doing so on a physical device. For example, you can transfer data faster to the emulator than to a device connected over USB. The emulator comes with predefined configurations for various Android phone, tablet, Wear OS, and Android TV devices.</p>\n\n
+        <b>Pros:</b>\n<p>Using an emulator in Android Studio is the perfect tool for making sure your applications UI presents the same way on all devices. I used the emulator mainly for creating my UI and making sure that the screen representation was correct for all devices.</p>\n\n
+        <b>Cons:</b>\n<p>It is sometimes tedious and frustrating correcting the screen representation using the emulator because of the views and how I wanted them incorporated inside my application. This is a beneficial yet time consuming problem that I faced due to XML layout behavior. The most important con that I faced in regards to this is the amount of memory it takes to run the emulator as opposed to a physical device. A physical device is much faster and uses a lot less memory when I profiled the project.</p>\n\n
+</string>
+
+    <string name="reflect_text2"><sup>1</sup><a href="https://aws.amazon.com/mobile/mobile-application-development">https://aws.amazon.com/mobile/mobile-application-development</a>, ‘Mobile Application development’.\n\n
+        <sup>2</sup><a href="https://developer.android.com/studio/run/emulator">https://developer.android.com/studio/run/emulator</a>, Android Developers, ‘Run apps on emulator’.</string>
+
+    <!--Information Text-->
+    <string name="all_term_info">Long press on the term you would like to edit.\n\nClick on the term to see term details.\n\nSwipe left to delete term. You can undo this action.</string>
+    <string name="assess_info">Click on the assessment to edit assessment details.\n\nSwipe left to delete assessment. You can undo this action.</string>
+    <string name="course_info">Click on the course to view and/ or edit course details.\n\nSwipe left to delete course. You can undo this action.</string>
+    <string name="notes_info">Click on the note to edit note details or share note.\n\nSwipe left to delete note. You can undo this action.</string>
+    <string name="wgu_surfer_reflection">WGU SURFER - REFLECTION</string>
+    <string name="add_test_data">Add Test Data</string>
+    <string name="alert_to_add_data">Please select "ADD TEST DATA" from options menu to add data from: my-surfer-database.db or all views will be empty!\n\nTHIS ONLY NEEDS TO BE DONE ONCE!</string>
+
+</resources>

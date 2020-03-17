@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/in_course_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="5000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/in_course_root">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:paddingBottom="@dimen/sixty_margin">
+
+    <TextView
+        android:id="@+id/course_Header_lbl_m"
+        style="@style/Headers2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extra_dimen"
+        android:layout_marginTop="@dimen/textTop_margin"
+        android:text="@string/PH_courseName"
+        app:layout_constraintStart_toStartOf="@+id/constraint_notes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mentor_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textTop_margin"
+        app:srcCompat="@drawable/ic_c_mentor_img"
+        android:tint="@color/colorPrimary2"
+        android:contentDescription="@string/mentor_img_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_Header_lbl_m" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mentor_card1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:layout_marginBottom="@dimen/extra_dimen"
+        app:cardBackgroundColor="@color/colorPrimaryDark3"
+        app:cardCornerRadius="@dimen/recycler_margin"
+        app:cardElevation="@dimen/recycler_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mentor_img">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_desc_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/recycler_margin">
+
+            <LinearLayout
+                android:id="@+id/bottom_lin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/extra_dimen"
+                android:orientation="vertical"
+                android:padding="@dimen/recycler_margin"
+                app:layout_constraintEnd_toEndOf="@id/constraint_desc_card"
+                app:layout_constraintStart_toStartOf="@id/constraint_desc_card"
+                app:layout_constraintTop_toTopOf="@+id/constraint_desc_card">
+
+                <TextView
+                    android:id="@+id/mentorName_desc"
+                    style="@style/Headers3"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/recycler_margin"
+                    android:text="@string/c_bot_nav_course_mentor2"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:id="@+id/mentorName_txt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/recycler_margin"
+                    android:text="@string/mentor_name_PH"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/mentorEmail_txt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/recycler_margin"
+                    android:text="@string/mentor_email_PH_u"
+                    android:textIsSelectable="true"
+                    android:textAlignment="textStart"
+                    style="@style/text_style6" />
+
+                <TextView
+                    android:id="@+id/mentorPhone_txt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/recycler_margin"
+                    android:text="@string/mentor_phone_PH_u"
+                    android:textIsSelectable="true"
+                    android:textAlignment="textStart"
+                    style="@style/text_style6" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/edit_fab_lin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mentor_edit_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:elevation="@dimen/recycler_margin"
+            android:src="@drawable/ic_edit_icon"
+            app:backgroundTint="@color/colorPrimary2"
+            app:fabSize="normal"
+            app:rippleColor="@color/floatTxtColor" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/addTFrag_layout"
+    tools:context="activities.terms_courses.AllTermsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addterm_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/addTFrag_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addTerm_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary2"
+            android:alpha="0.8">
+
+            <TextView
+                android:id="@+id/termHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:background="@android:color/transparent"
+                android:text="@string/addNewTerm"
+                android:textColor="@color/floatTxtColor"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/addTerm_container"
+                app:layout_constraintTop_toTopOf="@+id/addTerm_container" />
+
+            <TextView
+                android:id="@+id/selectSD"
+                style="@style/DatePickerTV"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:contentDescription="@string/SDEditBtn"
+                android:maxLines="1"
+                android:text="@string/termSDText"
+                app:layout_constraintStart_toStartOf="@id/addTerm_container"
+                app:layout_constraintTop_toBottomOf="@+id/termHeading" />
+
+            <TextView
+                android:id="@+id/popup_SD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/recycler_margin"
+                android:layout_marginTop="@dimen/forty_dimen"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/termSDFloatLbl"
+                android:textColor="@color/floatTxtColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/selectSD"
+                app:layout_constraintTop_toBottomOf="@+id/termHeading" />
+
+            <TextView
+                android:id="@+id/popup_ED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/recycler_margin"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:background="@android:color/transparent"
+                android:textColor="@color/floatTxtColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/selectED"
+                app:layout_constraintTop_toBottomOf="@+id/selectSD" />
+
+            <TextView
+                android:id="@+id/selectED"
+                style="@style/DatePickerTV"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:contentDescription="@string/EDEditBtn"
+                android:text="@string/termEDText"
+                app:layout_constraintStart_toStartOf="@id/addTerm_container"
+                app:layout_constraintTop_toBottomOf="@id/selectSD" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textlayout3"
+                style="@style/TextInput"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/fifteen_dimen"
+                android:maxWidth="203dp"
+                android:enabled="true"
+                android:theme="@style/TextInput"
+                app:layout_constraintStart_toStartOf="@+id/addTerm_container"
+                app:layout_constraintTop_toBottomOf="@+id/selectED">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTermName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences|text"
+                    android:maxWidth="203dp"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:minWidth="203dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:cursorVisible="true"
+                    android:nextFocusDown="@id/addTermBtn"
+                    android:hint="@string/termName"
+                    android:textColor="@color/floatTxtColor"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addTermBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addTermBtn"
+                android:textColor="@color/colorPrimary2"
+                app:rippleColor="@color/colorPrimary2"
+                app:backgroundTint="@color/floatTxtColor"
+                app:layout_constraintEnd_toEndOf="@+id/addTerm_container"
+                app:layout_constraintStart_toStartOf="@+id/addTerm_container"
+                app:layout_constraintTop_toBottomOf="@id/textlayout3"
+                app:layout_constraintBottom_toBottomOf="@+id/addTerm_container"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

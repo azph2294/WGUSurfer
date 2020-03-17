@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_course_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    tools:context="fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/in_course_home">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_assess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:paddingBottom="@dimen/sixty_margin">
+
+            <TextView
+                android:id="@+id/course_Header_lbl"
+                style="@style/Headers2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/textTop_margin"
+                android:text="@string/PH_courseName"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/startD_lbl"
+                style="@style/text_style1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:text="@string/course_SD"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toBottomOf="@id/course_Header_lbl" />
+
+            <TextView
+                android:id="@+id/startD_PH"
+                style="@style/text_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:text="@string/PH_startTermLbl"
+                app:layout_constraintStart_toEndOf="@id/startD_lbl"
+                app:layout_constraintTop_toBottomOf="@id/course_Header_lbl" />
+
+            <TextView
+                android:id="@+id/endD_lbl"
+                style="@style/text_style1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:text="@string/course_ED"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toBottomOf="@id/startD_lbl" />
+
+            <TextView
+                android:id="@+id/endD_PH"
+                style="@style/text_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:text="@string/PH_endTermLbl"
+                app:layout_constraintStart_toEndOf="@id/endD_lbl"
+                app:layout_constraintTop_toBottomOf="@id/startD_PH" />
+
+            <TextView
+                android:id="@+id/dueD_lbl"
+                style="@style/text_style3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:text="@string/course_dueD"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toBottomOf="@id/endD_lbl" />
+
+            <TextView
+                android:id="@+id/dueD_PH"
+                style="@style/text_style4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:paddingStart="@dimen/land_card_margin"
+                android:paddingEnd="@dimen/land_card_margin"
+                android:text="@string/PH_endTermLbl"
+                app:layout_constraintStart_toEndOf="@id/dueD_lbl"
+                app:layout_constraintTop_toBottomOf="@id/endD_lbl" />
+
+            <TextView
+                android:id="@+id/c_status_lbl"
+                style="@style/text_style1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:text="@string/course_status_lbl"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toBottomOf="@id/dueD_lbl" />
+
+            <TextView
+                android:id="@+id/c_status_type"
+                style="@style/text_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginTop="@dimen/recycler_margin"
+                android:text="@string/status_typePH"
+                app:layout_constraintStart_toEndOf="@+id/c_status_lbl"
+                app:layout_constraintTop_toBottomOf="@id/dueD_PH" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/desc_card"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/extra_dimen"
+                app:cardBackgroundColor="@color/colorPrimaryDark3"
+                app:cardCornerRadius="@dimen/recycler_margin"
+                app:cardElevation="@dimen/recycler_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/c_status_lbl">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_desc_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fifteen_dimen">
+
+                    <TextView
+                        android:id="@+id/course_desc_lbl"
+                        style="@style/text_style1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/recycler_margin"
+                        android:text="@string/c_desc_text2"
+                        app:layout_constraintBottom_toTopOf="@id/description_text"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:lineSpacingExtra="3dp"
+                        android:maxLines="8"
+                        android:scrollbars="vertical"
+                        android:text="@string/lorem_ipsum"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/edit_fab_lin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/c_edit_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:elevation="@dimen/recycler_margin"
+            android:src="@drawable/ic_edit_icon"
+            app:backgroundTint="@color/colorPrimary2"
+            app:fabSize="normal"
+            app:rippleColor="@color/floatTxtColor" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

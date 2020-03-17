@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_m_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    android:paddingBottom="@dimen/forty_dimen">
+
+    <TextView
+        android:id="@+id/headLbl"
+        style="@style/Headers1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:text="@string/edit_mentor_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_lin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_margin"
+        android:orientation="vertical"
+        android:padding="@dimen/card_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headLbl">
+
+        <EditText
+            android:id="@+id/mentorName_edit"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:hint="@string/mentor_nameHint"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords|text"
+            android:maxLines="1"
+            android:padding="@dimen/fifteen_dimen"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary3"
+            android:textColorHint="@color/colorPrimary3"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/mentorEmail_edit"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/land_card_margin"
+            android:hint="@string/mentor_emailHint"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/fifteen_dimen"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary3"
+            android:textColorHint="@color/colorPrimary3"
+            android:textSize="20sp" />
+
+        <com.santalu.maskedittext.MaskEditText
+            android:id="@+id/mentorPhone_edit"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/land_card_margin"
+            android:hint="@string/mentor_phoneHint"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:padding="@dimen/fifteen_dimen"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary3"
+            android:textColorHint="@color/colorPrimary3"
+            android:textSize="20sp"
+            app:met_mask="(###) ###-####" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_m_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:gravity="center"
+            android:text="@string/edit_mentor_btn"
+            android:textColor="@color/colorPrimary2"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="@dimen/land_card_margin"
+            app:rippleColor="@color/colorPrimary2"
+            app:strokeColor="@color/colorPrimary3"
+            app:strokeWidth="0.5dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

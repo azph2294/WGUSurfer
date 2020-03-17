@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    tools:context="activities.terms_courses.AllTermsActivity">
+
+    <include
+        android:id="@+id/currTerm_TB"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currTerm_TB">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_assess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:paddingBottom="160dp">
+
+            <ImageView
+                android:id="@+id/termSym"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/allTerms_img"
+                app:srcCompat="@drawable/ic_all_terms_btn"
+                app:layout_constraintBottom_toTopOf="@+id/term_rv_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraint_assess"
+                app:layout_constraintVertical_bias="0.10" />
+
+            <TextView
+                android:id="@+id/termText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:background="@color/colorPrimaryDark2"
+                android:text="@string/termsLbl"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary2"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/termSym"
+                app:layout_constraintTop_toTopOf="@+id/constraint_assess" />
+
+            <ImageButton
+                android:id="@+id/info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/textTop_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/info_text"
+                app:srcCompat="@drawable/ic_info_outline_yellow_35dp"
+                app:layout_constraintBottom_toTopOf="@id/term_rv_card"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/term_rv_card"
+                android:layout_width="500dp"
+                android:layout_height="380dp"
+                android:layout_marginStart="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginTop="@dimen/textTop_margin"
+                android:layout_marginEnd="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:layout_marginBottom="20dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:cardBackgroundColor="@color/colorPrimaryDark2"
+                app:cardCornerRadius="@dimen/recycler_margin"
+                app:cardElevation="@dimen/recycler_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/termText">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/term_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/card_margin"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical" />
+
+                <FrameLayout
+                    android:id="@+id/new_term_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="430dp"
+                    android:clickable="false" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/add_term_land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_term_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:elevation="@dimen/recycler_margin"
+            android:onClick="openAddTermLandscape"
+            android:src="@drawable/ic_library_add_black_24dp"
+            app:backgroundTint="@color/colorPrimary2"
+            app:fabSize="normal"
+            app:rippleColor="@color/floatTxtColor" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_term_FAB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:elevation="@dimen/recycler_margin"
+            android:onClick="hideAddTermFragment"
+            android:src="@drawable/ic_close_black_24dp"
+            app:backgroundTint="@color/colorPrimary2"
+            app:fabSize="normal"
+            app:rippleColor="@color/floatTxtColor" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

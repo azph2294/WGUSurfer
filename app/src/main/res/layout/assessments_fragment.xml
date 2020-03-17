@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_course_assessments"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    tools:context="fragments.AssessmentsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/in_course_assessments">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_assess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/card_margin">
+
+            <ImageButton
+                android:id="@+id/info_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/forty_dimen"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/info_text"
+                app:srcCompat="@drawable/ic_info2_outline_yellow_25dp"
+                app:layout_constraintBottom_toTopOf="@id/perf_card"
+                app:layout_constraintStart_toEndOf="@id/perf_add_btn" />
+
+            <TextView
+                android:id="@+id/assess_course_Header_lbl"
+                style="@style/Headers2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/textTop_margin"
+                android:text="@string/PH_courseName"
+                app:layout_constraintStart_toStartOf="@+id/constraint_assess"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/perf_header_lbl"
+                style="@style/TextHeaderStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:text="@string/perf_asses_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assess_course_Header_lbl" />
+
+            <ImageButton
+                android:id="@+id/perf_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginBottom="@dimen/land_card_margin"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/perf_img_btn"
+                android:focusable="true"
+                android:maxWidth="@dimen/textTop_margin"
+                android:maxHeight="@dimen/textTop_margin"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/assess_btn"
+                app:layout_constraintBottom_toTopOf="@id/perf_card"
+                app:layout_constraintStart_toEndOf="@id/perf_header_lbl" />
+
+            <ImageButton
+                android:id="@+id/obj_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginBottom="@dimen/land_card_margin"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/perf_img_btn"
+                android:focusable="true"
+                android:maxWidth="@dimen/textTop_margin"
+                android:maxHeight="@dimen/textTop_margin"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/assess_btn"
+                app:layout_constraintBottom_toTopOf="@id/obj_card"
+                app:layout_constraintStart_toEndOf="@id/perf_header_lbl" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/perf_card"
+                android:layout_width="350dp"
+                android:layout_height="225dp"
+                android:layout_marginTop="@dimen/card_margin"
+                app:cardBackgroundColor="@color/colorPrimaryDark3"
+                app:cardCornerRadius="@dimen/recycler_margin"
+                app:cardElevation="@dimen/recycler_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/perf_header_lbl">
+
+                <!--MAKE THIS LIST COLOR KEY BY STATUS-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/perf_asses_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/recycler_margin"
+                    android:scrollbars="vertical"
+                    android:textAlignment="viewStart" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/obj_header_lbl"
+                style="@style/TextHeaderStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_dimen"
+                android:layout_marginTop="@dimen/extra_dimen"
+                android:text="@string/obj_asses_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/perf_card" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/obj_card"
+                android:layout_width="350dp"
+                android:layout_height="225dp"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                app:cardBackgroundColor="@color/colorPrimaryDark3"
+                app:cardCornerRadius="@dimen/recycler_margin"
+                app:cardElevation="@dimen/recycler_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/obj_header_lbl">
+
+                <!--MAKE THIS LIST COLOR KEY BY STATUS-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/obj_asses_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/recycler_margin"
+                    android:scrollbars="vertical"
+                    android:textAlignment="viewStart" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

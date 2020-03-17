@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_obj_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    android:paddingBottom="@dimen/forty_dimen">
+
+    <TextView
+        android:id="@+id/headLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/forty_dimen"
+        android:text="@string/edit_o_assess_header"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/edit_obj_layout"
+        app:layout_constraintTop_toTopOf="@id/edit_obj_layout" />
+
+    <EditText
+        android:id="@+id/edit_o_assess_name"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/card_margin"
+        android:hint="@string/o_assess_name"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords|text"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:padding="@dimen/fifteen_dimen"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary3"
+        android:textColorHint="@color/colorPrimary3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/edit_obj_layout"
+        app:layout_constraintStart_toStartOf="@id/edit_obj_layout"
+        app:layout_constraintTop_toBottomOf="@id/headLbl" />
+
+    <LinearLayout
+        android:id="@+id/top_lin_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textTop_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/edit_obj_layout"
+        app:layout_constraintTop_toBottomOf="@id/edit_o_assess_name">
+
+        <TextView
+            android:id="@+id/end_edit_assess2"
+            style="@style/DatePickerTV2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_dateHint"
+            android:padding="@dimen/recycler_margin"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary3"
+            android:textColorHint="@color/colorPrimary3"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/due_date_PH_Lbl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:text="@string/goal_dateHint"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/top_lin_layout1"
+        app:layout_constraintTop_toBottomOf="@id/edit_o_assess_name" />
+
+    <LinearLayout
+        android:id="@+id/bottom_lin_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:layout_marginBottom="@dimen/extra_dimen"
+        android:orientation="vertical"
+        android:padding="@dimen/recycler_margin"
+        app:layout_constraintEnd_toEndOf="@id/edit_obj_layout"
+        app:layout_constraintStart_toStartOf="@id/edit_obj_layout"
+        app:layout_constraintTop_toBottomOf="@+id/top_lin_layout1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_o_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/edit_o_btn"
+            android:textColor="@color/colorPrimary2"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="@dimen/land_card_margin"
+            app:rippleColor="@color/colorPrimary2"
+            app:strokeColor="@color/colorPrimary3"
+            app:strokeWidth="0.5dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

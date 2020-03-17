@@ -1,0 +1,193 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_LayoutEditC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editC_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark2"
+        android:paddingBottom="@dimen/forty_dimen">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="5000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editC_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_editC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_margin"
+                android:paddingBottom="@dimen/sixty_margin">
+
+                <TextView
+                    android:id="@+id/editHeadLbl"
+                    style="@style/Headers1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/forty_dimen"
+                    android:text="@string/edit_scr_Header"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_editC"
+                    app:layout_constraintStart_toStartOf="@id/constraint_editC"
+                    app:layout_constraintTop_toTopOf="@id/constraint_editC" />
+
+                <EditText
+                    android:id="@+id/cName_edit"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:hint="@string/course_nameHint"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords|text"
+                    android:maxLines="1"
+                    android:padding="@dimen/fifteen_dimen"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimary3"
+                    android:textColorHint="@color/colorPrimary3"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_editC"
+                    app:layout_constraintStart_toStartOf="@id/constraint_editC"
+                    app:layout_constraintTop_toBottomOf="@id/editHeadLbl" />
+
+                <TextView
+                    android:id="@+id/editC_info_text2"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/recycler_margin"
+                    android:maxLines="3"
+                    android:text="@string/in_term_info"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/editC_info_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/top_lin_layout" />
+
+                <TextView
+                    android:id="@+id/editC_info_text"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fifteen_dimen"
+                    android:maxLines="3"
+                    android:text="@string/new_course_info"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/bottom_lin_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/top_lin_layout" />
+
+                <LinearLayout
+                    android:id="@+id/top_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/textTop_margin"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@id/constraint_editC"
+                    app:layout_constraintTop_toBottomOf="@id/cName_edit">
+
+                    <TextView
+                        android:id="@+id/start_edit"
+                        style="@style/DatePickerTV2"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/start_dateHint"
+                        android:padding="@dimen/recycler_margin"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/end_edit"
+                        style="@style/DatePickerTV2"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/extra_dimen"
+                        android:hint="@string/anti_end_dateHint"
+                        android:padding="@dimen/recycler_margin"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:layout_marginBottom="@dimen/extra_dimen"
+                    android:orientation="vertical"
+                    android:padding="@dimen/extra_dimen"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_editC"
+                    app:layout_constraintStart_toStartOf="@id/constraint_editC"
+                    app:layout_constraintTop_toBottomOf="@+id/top_lin_layout">
+
+                    <TextView
+                        android:id="@+id/choose_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_status"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/edit_status_picker"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/recycler_margin"
+                        android:layout_marginBottom="@dimen/recycler_margin"
+                        android:entries="@array/status_spinner" />
+
+                    <EditText
+                        android:id="@+id/c_desc_edit"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/land_card_margin"
+                        android:ellipsize="start"
+                        android:hint="@string/c_desc_text"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:maxLines="14"
+                        android:padding="@dimen/fifteen_dimen"
+                        android:scrollbars="vertical"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/editCBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/recycler_margin"
+                        android:text="@string/edit_c_lbl"
+                        android:textColor="@color/colorPrimaryDark2"
+                        app:backgroundTint="@color/colorPrimary2"
+                        app:rippleColor="@color/floatTxtColor" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

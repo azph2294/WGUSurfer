@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_perf_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark3"
+    android:paddingBottom="@dimen/forty_dimen">
+
+    <TextView
+        android:id="@+id/headLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/forty_dimen"
+        android:text="@string/add_p_assess_header"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/add_perf_layout"
+        app:layout_constraintTop_toTopOf="@id/add_perf_layout" />
+
+    <EditText
+        android:id="@+id/pName_add"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/card_margin"
+        android:hint="@string/p_assess_name"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords|text"
+        android:maxLines="1"
+        android:padding="@dimen/fifteen_dimen"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary3"
+        android:textColorHint="@color/colorPrimary3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/add_perf_layout"
+        app:layout_constraintStart_toStartOf="@id/add_perf_layout"
+        app:layout_constraintTop_toBottomOf="@id/headLbl" />
+
+
+    <TextView
+        android:id="@+id/newP_info_text"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:text="@string/new_assess_info"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_lin_layout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_lin_layout1"
+        app:layout_constraintTop_toBottomOf="@+id/pName_add" />
+
+    <LinearLayout
+        android:id="@+id/top_lin_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textTop_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/add_perf_layout"
+        app:layout_constraintTop_toBottomOf="@id/pName_add">
+
+        <TextView
+            android:id="@+id/end_p_assess"
+            style="@style/DatePickerTV2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_dateHint"
+            android:padding="@dimen/recycler_margin"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary3"
+            android:textColorHint="@color/colorPrimary3"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_lin_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_dimen"
+        android:layout_marginBottom="@dimen/extra_dimen"
+        android:orientation="vertical"
+        android:padding="@dimen/recycler_margin"
+        app:layout_constraintEnd_toEndOf="@id/add_perf_layout"
+        app:layout_constraintStart_toStartOf="@id/add_perf_layout"
+        app:layout_constraintTop_toBottomOf="@+id/top_lin_layout1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addNewPBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/add_p_assess_btn_txt"
+            android:textColor="@color/colorPrimary3"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="@dimen/land_card_margin"
+            app:rippleColor="@color/colorPrimary2"
+            app:strokeColor="@color/colorPrimary2"
+            app:strokeWidth="0.5dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

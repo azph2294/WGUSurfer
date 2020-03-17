@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/in_course_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_courses_TB"
+        layout="@layout/toolbar2" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/c_frags_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark2"
+        app:layout_constraintBottom_toTopOf="@id/course_bot_nav"
+        app:layout_constraintTop_toBottomOf="@id/in_courses_TB"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/course_bot_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorPrimaryDark2"
+        app:itemIconSize="@dimen/extra_dimen"
+        app:itemIconTint="@drawable/bot_nav_state"
+        app:itemRippleColor="@color/colorPrimary2"
+        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
+        app:itemTextColor="@drawable/bot_nav_state"
+        app:layout_constraintBottom_toBottomOf="@id/in_course_root"
+        app:layout_constraintEnd_toEndOf="@id/in_course_root"
+        app:layout_constraintStart_toStartOf="@id/in_course_root"
+        app:menu="@menu/course_bottom_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

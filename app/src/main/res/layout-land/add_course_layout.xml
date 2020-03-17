@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_LayoutAddC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editC_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark2"
+        android:paddingBottom="@dimen/forty_dimen">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="5000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editC_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_assess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_margin"
+                android:paddingBottom="@dimen/sixty_margin">
+
+                <TextView
+                    android:id="@+id/headLbl"
+                    style="@style/Headers1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/forty_dimen"
+                    android:text="@string/scrHeader"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_assess"
+                    app:layout_constraintStart_toStartOf="@id/constraint_assess"
+                    app:layout_constraintTop_toTopOf="@id/constraint_assess" />
+
+                <EditText
+                    android:id="@+id/cName_add"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:hint="@string/course_nameHint"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords|text"
+                    android:maxLines="1"
+                    android:padding="@dimen/fifteen_dimen"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimary3"
+                    android:textColorHint="@color/colorPrimary3"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_assess"
+                    app:layout_constraintStart_toStartOf="@id/constraint_assess"
+                    app:layout_constraintTop_toBottomOf="@id/headLbl" />
+
+
+                <TextView
+                    android:id="@+id/newC_info_text"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:text="@string/new_course_info"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/bottom_lin_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/top_lin_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/cName_add" />
+
+                <LinearLayout
+                    android:id="@+id/top_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/textTop_margin"
+                    android:layout_marginTop="@dimen/recycler_margin"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@id/constraint_assess"
+                    app:layout_constraintTop_toBottomOf="@id/cName_add">
+
+                    <TextView
+                        android:id="@+id/start_add"
+                        style="@style/DatePickerTV2"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/start_dateHint"
+                        android:padding="@dimen/recycler_margin"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/end_add"
+                        style="@style/DatePickerTV2"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fifteen_dimen"
+                        android:hint="@string/anti_end_dateHint"
+                        android:padding="@dimen/recycler_margin"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/extra_dimen"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_margin"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_assess"
+                    app:layout_constraintStart_toStartOf="@id/constraint_assess"
+                    app:layout_constraintTop_toBottomOf="@+id/top_lin_layout">
+
+                    <EditText
+                        android:id="@+id/mentorName_add"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:hint="@string/mentor_nameHint"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="textCapWords|text"
+                        android:maxLines="1"
+                        android:padding="@dimen/fifteen_dimen"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/mentorEmail_add"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/land_card_margin"
+                        android:hint="@string/mentor_emailHint"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="@dimen/fifteen_dimen"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="20sp" />
+
+                    <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/mentorPhone_add"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/land_card_margin"
+                        android:hint="@string/mentor_phoneHint"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:padding="@dimen/fifteen_dimen"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="20sp"
+                        app:met_mask="(###) ###-####" />
+
+                    <Spinner
+                        android:id="@+id/status_picker"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/card_margin"
+                        android:layout_marginBottom="@dimen/recycler_margin"
+                        android:entries="@array/status_spinner_no_drop" />
+
+                    <EditText
+                        android:id="@+id/c_desc"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/land_card_margin"
+                        android:ellipsize="start"
+                        android:hint="@string/c_desc_text"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:padding="@dimen/fifteen_dimen"
+                        android:scrollbars="vertical"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorPrimary3"
+                        android:textColorHint="@color/colorPrimary3"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addNewCBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/recycler_margin"
+                        android:text="@string/addNewCBtn"
+                        android:textColor="@color/colorPrimaryDark2"
+                        app:backgroundTint="@color/colorPrimary2"
+                        app:rippleColor="@color/floatTxtColor" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

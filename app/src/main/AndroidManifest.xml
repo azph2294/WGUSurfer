@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="dev.alvatech.c196_wgusurfer_ericbsmith">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:configChanges="orientation"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appName"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name="activities.terms_courses.CoursesActivity"
+            android:parentActivityName="activities.terms_courses.SelectedTermActivity" />
+        <activity
+            android:name="activities.terms_courses.SelectedTermActivity"
+            android:parentActivityName="activities.terms_courses.AllTermsActivity" />
+        <activity
+            android:name="activities.terms_courses.EditTermActivity"
+            android:label="@string/editTerm"
+            android:parentActivityName="activities.terms_courses.AllTermsActivity" />
+        <activity
+            android:name="activities.splash_main.SplashActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="activities.splash_main.MainActivity"
+            android:label="@string/appName"
+            android:noHistory="true" />
+        <activity
+            android:name="activities.terms_courses.CurrentTermActivity"
+            android:label="@string/mainLbl1"
+            android:parentActivityName="activities.splash_main.MainActivity" />
+        <activity
+            android:name="activities.terms_courses.AllTermsActivity"
+            android:label="@string/mainLbl2"
+            android:parentActivityName="activities.splash_main.MainActivity" />
+        <activity android:name="activities.splash_main.SupportActivity" />
+        <activity android:name="activities.splash_main.ReflectionActivity" />
+        <activity
+            android:name="activities.splash_main.ProgTrackActivity"
+            android:label="@string/mainLbl3" />
+    </application>
+
+</manifest>

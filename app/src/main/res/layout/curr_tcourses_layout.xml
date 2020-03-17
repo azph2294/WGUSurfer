@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:background="@color/bgRowBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/land_card_margin">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="@dimen/recycler_margin"
+            android:contentDescription="@string/deleteC"
+            android:layout_marginEnd="@dimen/recycler_margin"
+            android:layout_marginLeft="@dimen/recycler_margin"
+            android:layout_marginStart="@dimen/recycler_margin"
+            android:layout_marginTop="@dimen/recycler_margin"
+            android:layout_marginBottom="@dimen/recycler_margin"
+            app:srcCompat="@drawable/ic_delete_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/land_card_margin"
+            android:layout_toStartOf="@+id/delete_icon"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/deleteC"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/recycler_margin"
+        android:background="@color/colorPrimaryDark2">
+
+        <ImageView
+            android:id="@+id/course_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/coursesLbl"
+            app:srcCompat="@drawable/course_img"
+            android:layout_marginStart="@dimen/recycler_margin"
+            android:layout_marginTop="@dimen/recycler_margin"
+            android:layout_marginBottom="@dimen/recycler_margin"/>
+
+        <TextView
+            android:id="@+id/course_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/course_icon"
+            style="@style/RecyclerCourseNames"
+            android:text="@string/PH_courseName"
+            android:layout_marginStart="@dimen/recycler_margin"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

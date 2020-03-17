@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/course_prog_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/land_card_margin"
+        android:paddingBottom="@dimen/land_card_margin"
+        android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingEnd="@dimen/land_card_margin"
+        android:textSize="18sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_c_home_icon"
+        android:title="@string/c_bot_nav_home" />
+    <item
+        android:id="@+id/assessments"
+        android:icon="@drawable/ic_c_assessment_icon"
+        android:title="@string/c_bot_nav_assessments"/>
+    <item
+        android:id="@+id/mentor"
+        android:icon="@drawable/ic_c_mentor_icon"
+        android:title="@string/c_bot_nav_course_mentor"/>
+    <item
+        android:id="@+id/notes"
+        android:icon="@drawable/ic_c_notes_icon"
+        android:title="@string/c_bot_nav_notes"/>
+</menu>
